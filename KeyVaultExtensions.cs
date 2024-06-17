@@ -3,6 +3,7 @@ using Azure.Extensions.AspNetCore.Configuration.Secrets;
 using Azure.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Azure.Security.KeyVault.Secrets;
 
 namespace KeyVaultYouTubeDemo
 {
@@ -68,7 +69,7 @@ namespace KeyVaultYouTubeDemo
         }
     }
 
-    // CustomSecretManager implementation example
+    // CustomSecretManager implementation
     public class CustomSecretManager : KeyVaultSecretManager
     {
         private readonly string _prefix;
